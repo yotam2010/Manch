@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:cardElevation="@dimen/tiny_margin"
+    app:cardMaxElevation="@dimen/small_margin"
+    app:cardUseCompatPadding="true">
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:layout_margin="@dimen/tiny_margin"
+        android:id="@+id/item_purchase_tracker_date"/>
+
+    <com.kofigyan.stateprogressbar.StateProgressBar
+        android:id="@+id/state_progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:spb_currentStateNumber="one"
+        app:spb_maxStateNumber="four"
+        app:spb_stateBackgroundColor="#BDBDBD"
+        app:spb_stateForegroundColor="@color/colorAccent"
+        app:spb_stateNumberBackgroundColor="#808080"
+        app:spb_stateNumberForegroundColor="#eeeeee"
+        app:spb_currentStateDescriptionColor="#DB0082"
+        app:spb_stateDescriptionColor="#808080"
+        app:spb_animateToCurrentProgressState="true"
+        app:spb_checkStateCompleted="true"
+        android:layout_gravity="center_horizontal"/>
+    <ListView
+        android:layout_marginTop="@dimen/tiny_margin"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:id="@+id/item_purchase_tracker_list"
+        android:background="@color/track_order_list_color"></ListView>
+    <TextView
+        android:layout_marginTop="@dimen/tiny_margin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/item_purchase_tracker_finalPrice"
+        android:layout_marginRight="@dimen/small_margin"
+        android:textSize="@dimen/bodyTextSize"
+        android:textColor="@color/black"
+        android:textStyle="bold"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/small_margin"
+        android:text="@string/waiting_for_delivery_status_text"
+        android:id="@+id/item_purchase_tracker_wait_for_deliver"/>
+
+    <fragment
+        android:id="@+id/item_purchase_tracker_map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.hadas.yotam.manch.ManagementActivity"
+        />
+
+</LinearLayout>
+</android.support.v7.widget.CardView>

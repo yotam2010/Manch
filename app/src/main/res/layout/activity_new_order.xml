@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+          android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:id="@+id/new_order_linear_layout"
+             >
+
+    <ListView
+        android:id="@+id/new_order_summary_list"
+        android:layout_alignParentTop="true"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="@color/light_transperent_gray"/>
+
+    <TextView
+        android:id="@+id/new_order_total_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/small_margin"
+        android:layout_marginRight="@dimen/activity_vertical_margin"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textSize="@dimen/bodyTextSize"
+        android:layout_marginBottom="@dimen/small_margin"
+       />
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/activity_vertical_margin"
+        android:layout_marginLeft="@dimen/activity_vertical_margin"
+        >
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/new_order_name_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/full_name"
+            android:inputType="text"
+            android:lines="1"
+            android:gravity="right"
+            />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/activity_vertical_margin"
+        android:layout_marginLeft="@dimen/activity_vertical_margin"
+        >
+    <android.support.design.widget.TextInputEditText
+        android:id="@+id/new_order_phone_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/phone_number"
+        android:inputType="number"
+        android:maxLength="10"
+        android:gravity="right"
+        />
+    </android.support.design.widget.TextInputLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginRight="@dimen/activity_vertical_margin"
+        >
+    <android.support.design.widget.TextInputEditText
+        android:id="@+id/new_order_address_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/address"
+        android:inputType="text"
+        android:imeOptions="actionDone"
+        android:gravity="right"
+        />
+    </android.support.design.widget.TextInputLayout>
+
+    <ImageButton
+        android:id="@+id/new_order_gps_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_location_on_black_24dp"
+        android:layout_marginLeft="@dimen/small_margin"
+        />
+        </LinearLayout>
+    <com.dd.processbutton.iml.ActionProcessButton
+        android:id="@+id/new_order_send_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/send_order"/>
+</LinearLayout>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <ProgressBar
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/new_purchase_progressBar"
+        android:layout_centerInParent="true"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/products_recycler_view"
+        android:layout_marginLeft="@dimen/small_margin"
+        android:layout_marginRight="@dimen/small_margin">
+    </android.support.v7.widget.RecyclerView>
+    <ImageButton
+        android:visibility="gone"
+        android:layout_marginTop="@dimen/tiny_margin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/products_recycler_view"
+        android:layout_alignTop="@id/products_recycler_view"
+        android:background="@drawable/circle_button"
+        android:src="@drawable/ic_chevron_left_black_24dp"
+        android:id="@+id/products_recycler_next_item"/>
+    <ImageButton
+        android:visibility="gone"
+        android:layout_marginTop="@dimen/tiny_margin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@id/products_recycler_view"
+        android:layout_alignTop="@id/products_recycler_view"
+        android:background="@drawable/circle_button"
+        android:src="@drawable/ic_chevron_right_black_24dp"
+        android:id="@+id/products_recycler_previous_item"/>
+    <FrameLayout
+        android:layout_below="@id/products_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/product_card_fragment_container"></FrameLayout>
+</RelativeLayout>

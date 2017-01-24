@@ -1,0 +1,16 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto"
+      xmlns:tools="http://schemas.android.com/tools"
+      tools:context="com.hadas.yotam.manch.ManagementActivity">
+    <item
+        android:orderInCategory="2"
+        android:id="@+id/menu_sign_out"
+        android:title="@string/sign_out"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_keyboard_backspace_black_24dp"/>
+    <item android:id="@+id/menu_call_us"
+          android:orderInCategory="1"
+          android:title="התקשר לעסק"
+          app:showAsAction="always"
+          android:icon="@drawable/ic_phone_black_24dp"/>
+</menu>

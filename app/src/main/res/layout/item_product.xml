@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                                    android:layout_marginTop="@dimen/small_margin"
+                                    android:id="@+id/item_product_card_layout"
+    android:layout_width="100dp"
+    android:layout_height="wrap_content"
+    android:layout_marginRight="@dimen/tiny_margin"
+    android:layout_marginLeft="@dimen/tiny_margin">
+<RelativeLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+    android:padding="@dimen/small_margin">
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/item_product_image_container"
+        android:layout_centerHorizontal="true">
+    <ImageView
+        android:layout_width="@dimen/recycler_image_size"
+        android:layout_height="@dimen/recycler_image_size"
+        android:id="@+id/item_product_image"
+        android:src="@drawable/placeholder"
+        android:scaleType="centerInside"
+        android:background="@drawable/image_border_drawable"
+        />
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:id="@+id/item_product_image_progress"/>
+    </FrameLayout>
+    <TextView
+        android:layout_marginRight="@dimen/small_margin"
+        android:layout_below="@id/item_product_image_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/bodyTextSize"
+        android:maxLength="20"
+        android:id="@+id/item_product_title"
+        android:textColor="@color/black"
+        android:lines="1"/>
+    <TextView
+        android:layout_marginRight="@dimen/small_margin"
+        android:layout_below="@id/item_product_title"
+        android:textSize="@dimen/itemPriceTextSize"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/item_product_price"/>
+
+</RelativeLayout>
+</android.support.v7.widget.CardView>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true">
+        <shape android:shape="oval">
+            <solid android:color="@color/colorButtonPressed"/>
+            <padding android:bottom="@dimen/tiny_margin"
+                     android:top="@dimen/tiny_margin"
+                     android:left="@dimen/tiny_margin"
+                     android:right="@dimen/tiny_margin"/>
+        </shape>
+    </item>
+<item>
+    <shape android:shape="oval">
+        <solid android:color="@color/colorAccent"/>
+        <padding android:bottom="@dimen/tiny_margin"
+                 android:top="@dimen/tiny_margin"
+                 android:left="@dimen/tiny_margin"
+                 android:right="@dimen/tiny_margin"/>
+    </shape>
+</item>
+
+</selector>

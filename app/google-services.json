@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "546072243517",
+    "firebase_url": "https://manch-6ac4d.firebaseio.com",
+    "project_id": "manch-6ac4d",
+    "storage_bucket": "manch-6ac4d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:546072243517:android:ebd1a698048cbeb1",
+        "android_client_info": {
+          "package_name": "com.hadas.yotam.manch"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "546072243517-9lo33f1e6oif7qr3m7cok7qblo6b3m7l.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.hadas.yotam.manch",
+            "certificate_hash": "041663858E800C3C3263ABE546BFE9238C81746E"
+          }
+        },
+        {
+          "client_id": "546072243517-f3of1f4lnla1s3qabosa187hfintn4po.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBFcfT9LKPgOLSUhN5wSh7WISlxUFwzxpU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "546072243517-f3of1f4lnla1s3qabosa187hfintn4po.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
