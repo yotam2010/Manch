@@ -4,6 +4,7 @@ import android.annotation.TargetApi;
 import android.app.ActivityOptions;
 import android.content.Intent;
 import android.content.res.Configuration;
+import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.provider.Settings;
 import android.support.annotation.NonNull;
@@ -79,7 +80,6 @@ public class MainActivity extends AppCompatActivity implements SignInFragment.Si
 
         displayedFragment=false;
         setFirebase();
-
 
     }
     private void setFirebase(){

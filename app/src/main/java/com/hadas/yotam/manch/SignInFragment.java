@@ -59,6 +59,8 @@ public class SignInFragment extends Fragment {
         mLogInButton.setMode(ActionProcessButton.Mode.ENDLESS);
         mLogInButton.setProgress(1);
         mLogInButton.setEnabled(false);
+        mEmailEditText.setEnabled(false);
+        mPasswordEditText.setEnabled(false);
         mNewUserText.setEnabled(false);
         if(checkAcceptedText()){
             if(email!=null&&password!=null)
@@ -67,6 +69,8 @@ public class SignInFragment extends Fragment {
             mLogInButton.setProgress(-1);
             mLogInButton.setEnabled(true);
             mNewUserText.setEnabled(true);
+            mEmailEditText.setEnabled(true);
+            mPasswordEditText.setEnabled(true);
         }
     }
 
@@ -106,6 +110,9 @@ public class SignInFragment extends Fragment {
     }
         mNewUserText.setEnabled(true);
         mLogInButton.setEnabled(true);
+        mEmailEditText.setEnabled(true);
+        mPasswordEditText.setEnabled(true);
+
 
     }
 
@@ -117,6 +124,7 @@ public class SignInFragment extends Fragment {
         mNewUserText = (TextView) v.findViewById(R.id.sign_in_text_newUser);
         mPasswordEditText= (TextInputEditText)v.findViewById(R.id.sign_in_password);
         mLogInButton = (ActionProcessButton)v.findViewById(R.id.login_sign_in_button);
+        mLogInButton.setColorScheme(Color.RED,Color.GREEN,Color.YELLOW,Color.GRAY);
         mLogInButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

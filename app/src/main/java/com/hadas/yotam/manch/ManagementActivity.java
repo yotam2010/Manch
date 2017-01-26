@@ -35,6 +35,7 @@ import android.view.View;
 import android.view.ViewAnimationUtils;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ViewFlipper;
@@ -115,7 +116,7 @@ public class ManagementActivity extends AppCompatActivity implements ChangeTab {
             }
         });
 
-        TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
+        TabLayoutWithIcons tabLayout = (TabLayoutWithIcons) findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(mViewPager);
         mBroadcastReceiver = new BroadcastReceiver() {
             @Override
@@ -172,7 +173,6 @@ public class ManagementActivity extends AppCompatActivity implements ChangeTab {
             Utilities.signOut(this,mAuth);
             return true;
         }
-        if(!getResources().getBoolean(R.bool.tablet))
              if(id==R.id.menu_call_us){
             Intent intent = new Intent(Intent.ACTION_DIAL);
             intent.setData(Uri.parse("tel:0508329286"));
@@ -204,10 +204,10 @@ public class ManagementActivity extends AppCompatActivity implements ChangeTab {
 
     @Subscribe(sticky = true, threadMode = ThreadMode.MAIN)
     public void InternetListener(Boolean active){
-        CoordinatorLayout coordinatorLayout = (CoordinatorLayout) findViewById(R.id.main_content);
+        LinearLayout linearLayout = (LinearLayout) findViewById(R.id.main_content);
         if(!active) {
             if(snackbar!=null&& !snackbar.isShown() || snackbar==null)
-            snackbar = Snackbar.make(coordinatorLayout, R.string.no_internet_error, Snackbar.LENGTH_INDEFINITE);
+            snackbar = Snackbar.make(linearLayout, R.string.no_internet_error, Snackbar.LENGTH_INDEFINITE);
             snackbar.setAction("פתח הגדרות רשת", new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {

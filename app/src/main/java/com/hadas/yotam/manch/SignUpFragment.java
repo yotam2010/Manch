@@ -57,6 +57,10 @@ public class SignUpFragment extends Fragment {
         mSignUpButton.setProgress(1);
         mSignUpButton.setEnabled(false);
         mExistingUserText.setEnabled(false);
+        mEmailEditText.setEnabled(false);
+        mPasswordEditText.setEnabled(false);
+        mRePasswordEditText.setEnabled(false);
+
         if(checkAcceptedText()){
             if(email!=null&&password!=null)
                 mSignUp.signUp(email,password);
@@ -64,6 +68,10 @@ public class SignUpFragment extends Fragment {
             mSignUpButton.setProgress(-1);
             mSignUpButton.setEnabled(true);
             mExistingUserText.setEnabled(true);
+            mEmailEditText.setEnabled(true);
+            mPasswordEditText.setEnabled(true);
+            mRePasswordEditText.setEnabled(true);
+
         }
     }
 
@@ -113,6 +121,10 @@ public class SignUpFragment extends Fragment {
         }
         mExistingUserText.setEnabled(true);
         mSignUpButton.setEnabled(true);
+        mEmailEditText.setEnabled(true);
+        mPasswordEditText.setEnabled(true);
+        mRePasswordEditText.setEnabled(true);
+
     }
 
     @Nullable

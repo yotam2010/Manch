@@ -48,7 +48,7 @@ public class OrderTrackerItem extends Fragment implements OnMapReadyCallback {
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        mOrder = (Order) getArguments().getSerializable("order");
+        mOrder = (Order) getArguments().getParcelable("order");
         initializeFirebase();
     }
 

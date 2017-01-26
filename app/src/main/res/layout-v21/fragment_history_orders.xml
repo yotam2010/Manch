@@ -1,23 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:layout_width="match_parent"
-              android:layout_height="match_parent">
-    <TextView
-        android:layout_marginTop="@dimen/tiny_margin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="@android:color/holo_red_light"
-        android:id="@+id/purchase_tracker_pageCount"
-        android:layout_centerHorizontal="true"
-        android:layout_alignParentTop="true"
-        android:textStyle="bold"
-        />
-<android.support.v4.view.ViewPager
-    android:layout_below="@id/purchase_tracker_pageCount"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:id="@+id/purchase_tracker_ViewPager"></android.support.v4.view.ViewPager>
+              android:layout_height="match_parent"
+           >
 
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/history_recycler_view"
+        android:padding="@dimen/small_margin"
+        />
 
     <TextView
         android:layout_width="wrap_content"
@@ -26,17 +18,29 @@
         android:text="@string/new_order_text"
         android:textSize="@dimen/text_title_size"
         android:gravity="center"
+        android:id="@+id/history_empty_textView"
         android:elevation="3dp"
-        android:id="@+id/purchase_tracker_empty_textView"/>
+        android:background="@drawable/ripple"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="@string/new_order_text"
+        android:textSize="@dimen/text_title_size"
+        android:gravity="center"
+        android:elevation="3dp"
+        android:background="@drawable/ripple"
+        />
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/waiter_icon"
         android:layout_centerHorizontal="true"
-        android:layout_above="@id/purchase_tracker_empty_textView"
+        android:layout_above="@id/history_empty_textView"
         android:tint="@color/image_gray_tint"
         android:tintMode="src_atop"
-        android:id="@+id/purchase_tracker_empty_imageView"
+        android:id="@+id/history_empty_imageView"
         android:layout_marginBottom="@dimen/tiny_margin"
         />
 </RelativeLayout>

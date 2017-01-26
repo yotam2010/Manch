@@ -14,6 +14,10 @@ public abstract class AppConstants {
     private static Boolean isStoreOpen=false;
     private static Boolean internetConnection=false;
     public static final int MINIMUM_ORDER=60;
+    public static final int VIEW_REVEAL_ANIMATION_TIME=10;
+    public static final int VIEW_REVEAL_ANIMATION_DURATION=3;
+    public static final String TRACK_FRAGMENT_EMPTY_KEY="TRACK_FRAGMENT_EMPTY_KEY";
+    public static final String TRACK_FRAGMENT_DESTROYED_ORDERS="TRACK_FRAGMENT_DESTROYED_ORDERS";
 
     public static Boolean getIsStoreOpen() {
         return isStoreOpen;

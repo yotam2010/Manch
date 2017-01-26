@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#F44336</color>
-    <color name="colorPrimaryDark">#C62828</color>
-    <color name="colorAccent">#FF1744</color>
+    <color name="colorPrimary">#4FAF65</color>
+    <color name="colorPrimaryDark">#465775</color>
+    <color name="colorAccent">#276849</color>
     <color name="colorButtonNormal">#e4434e</color>
     <color name="colorButtonPressed">#ae1d3a</color>
     <color name="colorButtonDisable">#d2d2d2</color>
     <color name="white">#ffffff</color>
     <color name="black">#000000</color>
-    <color name="tabsLayout">#f74c40</color>
     <color name="transperentBlack">#7ba7a7a7</color>
     <color name="transperentWhite">#9bffffff</color>
     <color name="track_order_list_color">#ffc6d4</color>
@@ -17,5 +16,9 @@
     <color name="add_to_cart_button_color_pressed">#d0005c07</color>
     <color name="image_gray_tint">#949494</color>
     <color name="tab_indicator_color">#410000</color>
+    <color name="editLayout_hint_color">@color/colorAccent</color>
+    <color name="tab_layout_color">#c7ffab</color>
+    <color name="reveal_animation_color">#ccabf7ff</color>
+    <color name="tab_icon_selected">#276849</color>
 
 </resources>

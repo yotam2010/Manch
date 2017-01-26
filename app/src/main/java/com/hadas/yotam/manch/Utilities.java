@@ -1,16 +1,24 @@
 package com.hadas.yotam.manch;
 
+import android.animation.Animator;
+import android.annotation.TargetApi;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
+import android.graphics.drawable.Drawable;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
+import android.os.Build;
 import android.provider.Settings;
 import android.support.v7.app.AlertDialog;
+import android.view.View;
+import android.view.ViewAnimationUtils;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
+
+import static com.hadas.yotam.manch.AppConstants.VIEW_REVEAL_ANIMATION_DURATION;
 
 /**
  * Created by Yotam on 12/12/2016.
@@ -75,5 +83,38 @@ public abstract class Utilities {
         AlertDialog dialog = builder.create();
         dialog.show();
     }
+    @TargetApi(21)
+    public static void clickMeAnimation(final View v,Context context){
+            final Drawable drawable = v.getBackground();
+            int cx = v.getWidth() / 2;
+            int cy = v.getHeight() / 2;
+            float radius = (float) Math.hypot(cx, cy);
+            Animator animator = ViewAnimationUtils.createCircularReveal(v, cx, cy, 0, radius);
+            v.setBackgroundColor(context.getResources().getColor(R.color.reveal_animation_color));
+            v.setVisibility(View.VISIBLE);
+            animator.setDuration(VIEW_REVEAL_ANIMATION_DURATION*1000);
+            animator.addListener(new Animator.AnimatorListener() {
+                @Override
+                public void onAnimationStart(Animator animation) {
+
+                }
+
+                @Override
+                public void onAnimationEnd(Animator animation) {
+                    v.setBackground(drawable);
+                }
+
+                @Override
+                public void onAnimationCancel(Animator animation) {
+                    v.setBackground(drawable);
+                }
+
+                @Override
+                public void onAnimationRepeat(Animator animation) {
+
+                }
+            });
+            animator.start();
+        }
 
 }
